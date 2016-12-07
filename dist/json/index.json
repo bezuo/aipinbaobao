@@ -1,0 +1,26 @@
+{
+    "lists":[
+        {
+        	"link": "list.html",
+            "title":"亚马逊海外购一周榜",
+            "pic":"images/index_02.png",
+            "time":"2015年9月13 - 9月20日",
+            "content":"No.1 美赞臣 安儿健Enfakid奶粉港版4段900g"
+        },
+        {
+        	"logo":"images/logo-amazon.png",
+            "link": "list.html",
+            "title":"户外用品全网月销榜",
+            "pic":"images/index_03.png",
+            "time":"2015年9月13 - 9月22日",
+            "content":"No.1 笔记本电脑淘宝音箱低音炮音响多媒体USB2"
+        },
+        {
+            "link": "list.html",
+            "title":"亚马逊海外购一周榜",
+            "pic":"images/index_02.png",
+            "time":"2015年9月13 - 9月20日",
+            "content":"No.1 dostyle SD106户外便携随身小音箱热力橙"
+        }
+    ]
+}

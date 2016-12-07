@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>搜索页</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="style/layout.min.css" />
+<!-- 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- 页面下拉加载动效 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/loading.min.css" />
+<!-- 页面下拉加载动效 end -->
+
+<!-- <script src="js/zepto.min.js"></script>
+<script src="js/gmu.min.js"></script> -->
+
+<!-- <script data-main="js/main" src="js/require.js" defer async="true"></script> -->
+<style type="text/css">
+#page {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.top-fixed {
+	position: absolute;
+}
+
+.ui-refresh {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ebebeb;
+}
+
+.search-box {
+	padding-left: 4rem;
+}
+
+.icon-search {
+	left: 5rem;
+}
+</style>
+</head>
+
+<body class="bg01">
+
+<section id="page">	
+	<!-- header start -->
+	<header class="top-fixed header">
+		<form action="">
+			<div class="search-box">
+				<span class="iconfont search-back">&#xe600;</span>
+			  	<span class="iconfont icon-search">&#xe61d;</span>
+				<input type="search" placeholder="请输入商品名称" class="search-text" />
+				<a href="javascript:void(0);" class="search-btn">搜索</a>
+			</div>
+		</form>
+	</header>
+	<!-- / header end -->
+		
+	<!-- article start -->
+	<article class="pad-top44 ui-refresh">
+		
+		<!-- <div class="search-error">
+			<div class="search-error-box">
+				<span class="iconfont text-color1">&#xe61a;</span>
+				<h3>抱歉，没有找到符合条件的商品</h3>
+				<p class="font12 text-color1">我们为您推荐其他热卖商品</p>
+			</div>
+		</div> -->
+
+		<div class="searchTip">为您搜索到有关<em class="text-color">#玩具</em>以下商品以下商品以下商品</div>
+
+		<section class="fn-clear pt-list">
+			<div class="pt-item" data-href="">
+				<span class="pt-img">
+					<img data-url="https://img.alicdn.com/tps/i1/T1ja5FXtpfXXaqQZrM-157-157.png" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2674385524/TB2A7lRnVXXXXaJXXXXXXXXXXXX_!!2674385524.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/TB1RyUCMXXXXXaSXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">夏季短袖衬衫男修身型青年韩版夏天个性条纹半袖休闲衬衣英伦潮流</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/2671259912/TB2vLS7mVXXXXa0XXXXXXXXXXXX_!!2671259912.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季真丝桑蚕丝短袖衬衫男士商务休闲衬衣韩版修身薄款男装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item" data-href="">
+				<span class="pt-img">
+					<img data-url="https://img.alicdn.com/tps/i1/T1ja5FXtpfXXaqQZrM-157-157.png" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2674385524/TB2A7lRnVXXXXaJXXXXXXXXXXXX_!!2674385524.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/TB1RyUCMXXXXXaSXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">夏季短袖衬衫男修身型青年韩版夏天个性条纹半袖休闲衬衣英伦潮流</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/2671259912/TB2vLS7mVXXXXa0XXXXXXXXXXXX_!!2671259912.jpg_250x250.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季真丝桑蚕丝短袖衬衫男士商务休闲衬衣韩版修身薄款男装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item" data-href="">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/TB1jlaqLpXXXXcsXVXXXXXXXXXX_!!0-item_pic.jpg_350x350.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/TB1vKQ3KpXXXXcraXXXXXXXXXXX_!!0-item_pic.jpg_350x350.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/TB17f_JJFXXXXatXpXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">夏季短袖衬衫男修身型青年韩版夏天个性条纹半袖休闲衬衣英伦潮流</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/268034409/TB2KID5mFXXXXcQXpXXXXXXXXXX-268034409.jpg_350x350.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季真丝桑蚕丝短袖衬衫男士商务休闲衬衣韩版修身薄款男装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search2.alicdn.com/img/bao/uploaded/i4/i3/TB11GA1MXXXXXcrXVXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">夏季短袖衬衫男修身型青年韩版夏天个性条纹半袖休闲衬衣英伦潮流</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/268034409/TB2EuaPopXXXXXoXXXXXXXXXXXX-268034409.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季真丝桑蚕丝短袖衬衫男士商务休闲衬衣韩版修身薄款男装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item" data-href="">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/TB1HSMYJVXXXXXlaXXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search2.alicdn.com/img/bao/uploaded/i4/i4/TB11FAoJFXXXXa7XFXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季男士短袖T恤男纯棉翻领polo衫韩版修身潮男款半袖男夏装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search1.alicdn.com/img/bao/uploaded/i4/i4/TB1GJhyKFXXXXaQXVXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">夏季短袖衬衫男修身型青年韩版夏天个性条纹半袖休闲衬衣英伦潮流</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+
+			<div class="pt-item">
+				<span class="pt-img">
+					<img data-url="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/TB1WCc5MpXXXXXRaXXXXXXXXXXX_!!0-item_pic.jpg_300x300.jpg" class="imglazyload" />
+				</span>
+
+				<div class="pt-text-box">
+					<p class="pt-text">2016夏季真丝桑蚕丝短袖衬衫男士商务休闲衬衣韩版修身薄款男装</p>
+					<span class="fn-right text-color1 font12">5人团</span>
+					<em class="text-color font15">¥26.0</em>
+				</div>
+			</div>
+		</section>
+	</article>
+	<!-- / article end -->	
+</section>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/gmu.min.js"></script>
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript">
+	// 图片延迟加载;
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.ipinbb.com/ipbb/static/images/img-placeholder.png",
+		distance: "50"
+	});
+</script>
+</body>
+</html>

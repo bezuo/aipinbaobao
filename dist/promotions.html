@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>爱拼宝宝</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="style/layout.min.css" />
+<!-- 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- 页面下拉加载动效 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/loading.min.css" />
+<!-- 页面下拉加载动效 end -->
+<style type="text/css">
+	.refresh-box {
+		background-color: rgb(255,255,255);
+	}
+</style>
+</head>
+
+<body>
+<section>
+	<!-- header start -->
+	<header class="top-fixed header">
+		<a href="javascript: history.back();" class="fn-left iconfont page-back"></a>
+		<h1 class="top-h1">10元任性团专区</h1>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article class="pad-top44 ui-refresh">
+		<!-- banner start -->
+		<div class="limited-banner">
+			<img src="images/promotionsBg.png" >
+		</div>
+		<!-- / banner end -->
+
+		<!-- list start -->
+		<section class="cx-list">
+			<ul class="fn-clear">
+				<li>
+					<div class="cx-box">
+						<span class="cx-box-img">
+							<img data-url="http://img.alicdn.com/imgextra/i4/328478321/TB2gNiFoFXXXXcTXpXXXXXXXXXX_!!328478321.jpg" class="imglazyload" />
+						</span>
+					</div>
+
+					<div class="cx-box-btm">
+						<h4>儿童智能滑行车代步车儿童智能滑行车代步车</h4>
+						<p>
+							<em class="fn-right text-color1">6人团</em>
+							<span class="text-color">¥9.80</span>
+						</p>
+						<a href="#" class="cx-link-btn">立即抢购<span class="iconfont">&#xe60c;</span></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="cx-box">
+						<span class="cx-box-img">
+							<img data-url="http://img.alicdn.com/imgextra/i4/TB1OH_.KVXXXXc0XXXXXXXXXXXX_!!0-item_pic.jpg" class="imglazyload" />
+						</span>
+					</div>
+
+					<div class="cx-box-btm">
+						<h4>儿童智能滑行车代步车</h4>
+						<p>
+							<em class="fn-right text-color1">6人团</em>
+							<span class="text-color">¥9.80</span>
+						</p>
+						<a href="#" class="cx-link-btn">立即抢购<span class="iconfont">&#xe60c;</span></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="cx-box">
+						<span class="cx-box-img">
+							<img data-url="http://img.alicdn.com/imgextra/i4/328478321/TB2gNiFoFXXXXcTXpXXXXXXXXXX_!!328478321.jpg" class="imglazyload" />
+						</span>
+					</div>
+
+					<div class="cx-box-btm">
+						<h4>儿童智能滑行车代步车</h4>
+						<p>
+							<em class="fn-right text-color1">6人团</em>
+							<span class="text-color">¥9.80</span>
+						</p>
+						<a href="#" class="cx-link-btn">立即抢购<span class="iconfont">&#xe60c;</span></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="cx-box">
+						<span class="cx-box-img">
+							<img data-url="http://img.alicdn.com/imgextra/i4/TB1OH_.KVXXXXc0XXXXXXXXXXXX_!!0-item_pic.jpg" class="imglazyload" />
+						</span>
+					</div>
+
+					<div class="cx-box-btm">
+						<h4>儿童智能滑行车代步车</h4>
+						<p>
+							<em class="fn-right text-color1">6人团</em>
+							<span class="text-color">¥9.80</span>
+						</p>
+						<a href="#" class="cx-link-btn">立即抢购<span class="iconfont">&#xe60c;</span></a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- / list end -->
+
+		<!--setup方式带有class为ui-refresh-down或ui-refresh-up的元素必须加上，用于放refresh按钮-->
+		<div class="ui-refresh-down"></div>
+	</article>
+	<!-- / article end -->
+</section>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript" src="js/gmu.min.js"></script>
+<script type="text/javascript">
+
+	/*组件初始化js start*/
+	$('.ui-refresh').refresh({
+	    load: function (dir, type) {
+	        var me = this;
+	        var promptUp = $("<div class='prompt-up'>没有更多内容了</div>");
+	        var promptDown = $("<div class='prompt-down'>没有更多内容了</div>");
+
+	        // 向上拉且上一次上拉请求数据不为空, 或下拉且上一次下拉请求数据不为空 	
+	        if ($(".prompt-down").length === 0) {
+
+	        	setTimeout(function(){
+	        		// 向服务器发送一个请求, 并 
+		            $.getJSON('json/list.json', function (data) {
+			            var result = '',
+			            	list = $('.cx-list ul');
+
+		            	// 对请求回来的数据进行判断是否为空
+		            	// 不为空：将请求回来的json数据拼接成字符串并将数据插入至对应的方向
+		            	// 为空：则在直接禁用相应的拉动刷新且页面上添加提示 ———— 没有更多内容了
+						if (data !== null) {
+
+			                // 判断拉动方向将拼接的数据插入
+			                list[dir == 'up' ? 'prepend' : 'append'](strList(data,result ));
+			                //数据加载完成后改变状态
+			            	me.afterDataLoading(dir);
+			            	$(".imglazyload").lazyImgLoad({
+								backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+								distance: "50"
+							});
+
+		                } else {
+				        	// 将没有更多数据友好提示添加至页面
+		        			$(".ui-refresh-down").hide().children().removeClass();
+			            	me.afterDataLoading(dir);
+				        	return dir !== 'up' ? $(".ui-refresh").append(promptUp) : $(".ui-refresh").before(promptDown);
+				        }
+				    });
+	        	},500);
+	        }
+	    }
+	});
+	/*组件初始化js end */
+
+	// 字符串拼接
+	function strList(data,result){
+		for(var i = 0, len = data.lists.length; i < len; i++){
+            
+			result+="<li>" +
+						"<div class='cx-box'>" +
+							"<span class='cx-box-img'>" +
+								"<img data-url='http://img.alicdn.com/imgextra/i4/TB1OH_.KVXXXXc0XXXXXXXXXXXX_!!0-item_pic.jpg' class='imglazyload' />" +
+							"</span>" +
+						"</div>" +
+						"<div class='cx-box-btm'>" +
+							"<h4>儿童智能滑行车代步车</h4>" +
+							"<p>" +
+								"<em class='fn-right text-color1'>6人团</em>" +
+								"<span class='text-color'>¥9.80</span>" +
+							"</p>" +
+							"<a href='#' class='cx-link-btn'>立即抢购<span class='iconfont'>&#xe60c;</span></a>" +
+						"</div>" +
+					"</li>";
+        };
+        return result;
+	}
+
+	// 图片延迟加载;
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.ipinbb.com/ipbb/static/images/img-placeholder.png",
+		distance: "50"
+	});
+</script>
+</body>
+</html>

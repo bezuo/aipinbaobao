@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>订单详情——申请退款</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="../style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="../style/layout.min.css" />
+<!-- 页面模块样式 end -->
+</head>
+
+<body class="bg01">
+<section>
+	
+	<!-- header start -->
+	<header class="top-fixed header writeBg">
+		<a href="javascript:void(0);" class="fn-right top-right text-color" id="refund">取消申请</a>
+		<a href="javascript: history.back();" class="fn-left iconfont page-back01"></a>
+		<h1 class="top-h1"><span class="text-color">部分退款详情</span></h1>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article class="pad-top44">
+		<hgroup class="statusBox statusBg02">
+			<h2>已申请退款，正等待着处理</h2>
+			<h3>请稍等处理结果</h3>
+		</hgroup>
+
+		<div class="orderAddress">
+			<span class="fn-left receipt-img iconfont">&#xe617;</span>
+			<div class="order-info01">
+				<span class="fn-right iconfont order-arrow">&#xe60c;</span>
+				<div class="order-contact">
+					<span class="fn-right phone">18616574681</span>
+					<em class="receiver">收货人：唐先生</em>
+				</div>
+				<p class="order-address">收货人地址：广东省深圳市南山区科技园北区宝深路科陆电子大厦A座13楼必做网络科技有限公司</p>
+			</div>
+		</div>
+		
+		<div class="order-refund" data-href="orderRefund.html">
+			<ul>
+				<li data-href="service.html">
+					<span class="fn-right iconfont">&#xe60c;</span>
+					联系客服
+				</li>
+				
+				<li data-href="orderRefund.html">
+					<span class="fn-right iconfont">&#xe60c;</span>
+					有部分退款金额已完成
+				</li>
+			</ul>			
+		</div>
+
+		<div class="list-box02 order-commodity">
+			<div class="order-item">
+				<span class="fn-left list-img04" class="../details.html">
+					<img src="https://gd3.alicdn.com/bao/uploaded/i3/434947224/TB2J.8xkFXXXXbJXXXXXXXXXXXX_!!434947224.jpg_400x400.jpg" class="imglazyload" data-alt="2016春季新款t恤长袖大码宽松韩版印花圆领休闲打底T恤女装" />
+				</span>
+
+				<div class="list-content04">
+					<h3 class="list-title04">国行联保Canon/佳能微单相机 EOS M2 18-55STM…..</h3>
+					<p class="order-text">颜色：白色 <i>尺寸：80cm*120cm</i></p>
+					<div class="price04">
+						<span class="fn-right text-color1">×1</span>	
+						<em class="text-color">¥10.01</em>
+					</div>
+				</div>
+			</div>
+
+			<div class="order-item">
+				<span class="fn-left list-img04" class="../details.html">
+					<img src="https://gd3.alicdn.com/bao/uploaded/i3/434947224/TB2J.8xkFXXXXbJXXXXXXXXXXXX_!!434947224.jpg_400x400.jpg" class="imglazyload" data-alt="2016春季新款t恤长袖大码宽松韩版印花圆领休闲打底T恤女装" />
+				</span>
+
+				<div class="list-content04">
+					<h3 class="list-title04">国行联保Canon/佳能微单相机 EOS M2 18-55STM…..</h3>
+					<p class="order-text">颜色：白色 <i>尺寸：80cm*120cm</i></p>
+					<div class="price04">
+						<span class="fn-right text-color1">×1</span>	
+						<em class="text-color">¥10.01</em>
+					</div>
+				</div>
+			</div>
+
+			<div class="order-price">
+				<em class="fn-right text-color">¥10.00</em>
+				<span class="text-color1">邮费</span>
+			</div>
+
+			<div class="order-price">
+				<em class="fn-right text-color">¥10.01</em>
+				<span class="text-color1">合计</span>
+			</div>
+		</div>
+	</article>
+	<!-- / article end -->
+</section>
+
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/base.min.js"></script>
+<script type="text/javascript">
+	$("#refund").dialog({
+		text:"您正在发起取消退款，取消退款申请的订单不能再次发起退款，请考虑后确认。",
+		btnOK: "确定",
+		btnCancel: "取消"
+	});
+
+	// 点击确定
+	$(document).on("click", ".btn-ok", function(){
+		location.href = "orderDetail04.html";
+	});
+</script>
+</body>
+</html>

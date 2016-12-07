@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>爱拼宝宝</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="style/layout.min.css" />
+<!-- 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- 页面下拉加载动效 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/loading.min.css" />
+<!-- 页面下拉加载动效 end -->
+</head>
+
+<body class="bg01">
+<section>
+	<!-- header start -->
+	<header class="userTop user-top-bg01">
+		<span class="user-img">
+			<img src="http://img5.imgtn.bdimg.com/it/u=1780583898,3530913615&fm=11&gp=0.jpg" />
+		</span>
+		<p class="userName">骑着乌龟追宝马</p>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article>
+		<div class="allOrders" data-href="order/orderList.html">
+			<em class="fn-right">查看<i class="iconfont">&#xe60c;</i></em>
+			<span>正在进行中的订单</span>
+		</div>
+
+		<div class="order-column">
+			<div class="orderStatus" data-href="#">
+				<em class="iconfont">&#xe610;</em>
+				<span>待成团</span>
+				<i>12</i>
+			</div>
+			
+			<div class="orderStatus" data-href="#">
+				<em class="iconfont">&#xe612;</em>
+				<span>待付款</span>
+				<i>12</i>
+			</div>
+
+			<div class="orderStatus icons-send-active" data-href="#">
+				<em class="iconfont">&#xe60e;</em>
+				<span>待发货</span>
+				<i>9</i>
+			</div>
+
+			<div class="orderStatus" data-href="#">
+				<em class="iconfont">&#xe60f;</em>
+				<span>待收货</span>
+				<i>6</i>	
+			</div>
+
+			<div class="orderStatus" data-href="#">
+				<em class="iconfont">&#xe611;</em>
+				<span>已完成</span>
+				<i>42</i>				
+			</div>
+		</div>
+		
+		<!-- 现金券 start -->
+		<div class="coupons-box">
+			<a href="order/coupon.html">
+				<span class="fn-right font12 text-color1">待返¥11.00<i class="iconfont icon-arrow">&#xe60c;</i></span>
+				<span class="iconfont icon-coupon">&#xe620;</span>
+				<em>现金劵（<span class="text-color">共¥23.00</span>）</em>
+			</a>
+		</div>
+		<!-- / 现金券 end -->
+	</article>
+	<!-- / article end -->
+	
+	<!-- tips start -->
+	<section class="fn-clear tips-yanz" style="top: 0;">
+		<div class="fn-right tips-add">添加</div>
+		<div class="fn-left tips-yanz-img">
+			<img src="http://qr.api.cli.im/qr?data=%25E8%2590%25BD%25E9%259B%25A8&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=c6d2e0fb3f7ae294b85bfa7a8599c35c">
+		</div>
+		<div class="fn-left tips-yanz-text">
+			<p>您的VIP专属号为A123</p>
+			<p>需添加客服为好友验证方可发货</p>
+		</div>
+	</section>
+	<!-- / tips end -->
+
+	<!-- footer start -->
+	<footer class="btm-fixed nav-box">
+		<a href="index.html">
+			<span class="iconfont iconfont-home">&#xe60b;</span>爱拼宝宝
+		</a>
+		<a href="hotSpellGroup.html">
+			<span class="iconfont">&#xe624;</span>正在热拼
+		</a>
+		<a href="search.html">
+			<span class="iconfont">&#xe623;</span>搜索
+		</a>
+		<a href="testList.html">
+			<span class="iconfont">&#xe606;</span>值得买
+		</a>
+		<a href="user1.html" class="nav-active">
+			<span class="iconfont iconfont-user">&#xe608;</span>我的
+		</a>
+	</footer>
+	<!-- / footer end -->
+</section>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 图片自适应固定大小;
+	$.fn.autoImg = function (options) {
+
+		var that = $(this),
+		// 图片地址
+		img_url = that.attr("src"),
+
+		// 创建一个图片对象
+		img = new Image();
+
+		img.src = img_url;
+
+		function blur() {
+			var w = options.width(),
+				h = options.height(),
+				imgDom = document.createElement("div");
+			
+			imgDom.setAttribute("class", "blurImg");
+
+			$(imgDom).css({
+				"width": w,
+				"height": h,
+				"backgroundImage": "url("+img_url+")"
+			})
+			$(".userTop").prepend(imgDom);
+		}
+		typeof options == "object" ? blur() : false;
+
+		// 定时执行获取宽高
+		var check = function(){
+			// 只要任何一方大于0
+			// 表示已经服务器已经返回宽高
+			var w = img.width, h = img.height;
+			if(w > 0 || h > 0) {
+				w > h ? that.css("height","100%") : that.css("width","100%");
+				that.parent().css("border", "1px solid rgb(255,255,255)");
+
+				that.parent().before("<span class='mask-img'></span>");
+
+				clearInterval(set);
+			}
+		};
+
+		var set = setInterval(check,40);
+	};
+
+	$(".user-img img ").autoImg($(".userTop"));
+
+	// 验证
+	if($(".tips-yanz").length != 0) {
+		$(".tips-yanz").verificationUser({
+			num: "78062323",
+			url: "http://qr.api.cli.im/qr?data=%25E5%25A4%25A7%25E5%25B8%2588%25E5%25A4%25A7%25E5%25B8%2588%25E7%259A%2584&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=cb751f34d8d32dc9cc6d68bef59bbf6a"
+		});
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>订单详情——申请退款</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="../style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="../style/layout.min.css" />
+<!-- 页面模块样式 end -->
+</head>
+
+<body>
+<section>
+	
+	<!-- header start -->
+	<header class="top-fixed header writeBg service-header">
+		<a href="javascript: history.back();" class="fn-left iconfont page-back01"></a>
+		<h1 class="top-h1"><span class="text-color">联系客服</span></h1>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article class="pad-top44">
+		<hgroup class="service-top">
+			<h2>您若有任何有关订单问题，您可以通过已下途径联系我们。</h2>
+			<h3 class="font14">通过微信公众号直接在公众号说您需咨询的问题如下图</h3>
+		</hgroup>
+
+		<section class="service-gzh">
+			<img src="../images/service.png" />
+			<p>微信公众号：<em class="text-color">ipinbb</em></p>
+		</section>
+		
+		<section class="service-ewm">
+			<p class="font14">或添加客服为好友直接询问，下图客服微信</p>
+
+			<div class="fn-clear service-ewm-box">
+				<div class="fn-left service-ewm-item">
+					<span class="service-ewm-img"><img src="http://qr.api.cli.im/qr?data=%25E8%2590%25BD%25E9%259B%25A8&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=c6d2e0fb3f7ae294b85bfa7a8599c35c" class="img-pop" /></span>
+					<p>客服微信：IPBB-XX</p>
+				</div>
+
+				<div class="fn-left service-ewm-item">
+					<span class="service-ewm-img"><img src="http://qr.api.cli.im/qr?data=%25E7%25BD%2597%25E7%2585%259C&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=80279f7648f0fb07a31019878f4a8b86" class="img-pop" /></span>
+					<p>客服微信：IPBB-XX</p>
+				</div>
+			</div>
+			<p class="text-color service-error">注：客服工作时间为每日09:30—18:30</p>
+		</section>
+	</article>
+	<!-- / article end -->
+</section>
+
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/base.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 查看二维码
+		$(".img-pop").viewImg();
+	})
+</script>
+</body>
+</html>

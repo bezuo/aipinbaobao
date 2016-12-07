@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>订单详情——待成团</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="../style/base.min.css" />
+<!-- 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="../style/layout.min.css" />
+<!-- 页面模块样式 end -->
+</head>
+
+<body class="bg01">
+<section>
+	
+	<!-- header start -->
+	<header class="top-fixed header writeBg">
+		<a href="javascript: void(0);" class="fn-right top-right text-color" id="refund">申请退款</a>
+		<a href="javascript: history.back();" class="fn-left iconfont page-back01"></a>
+		<h1 class="top-h1"><span class="text-color">订单详情</span></h1>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article class="pad-top44 pad-btm50">
+		<hgroup class="statusBox statusBg01">
+			<h2>订单状态：已付款</h2>
+			<h3>卖家正在准备发货中</h3>
+		</hgroup>
+
+		<div class="orderAddress">
+			<span class="fn-left iconfont receipt-img">&#xe617;</span>
+			<div class="order-info01">
+				<span class="fn-right iconfont order-arrow">&#xe60c;</span>
+				<div class="order-contact">
+					<span class="fn-right phone">18616574681</span>
+					<em class="receiver">收货人：唐先生</em>
+				</div>
+				<p class="order-address">收货人地址：广东省深圳市南山区科技园北区宝深路科陆电子大厦A座13楼必做网络科技有限公司</p>
+			</div>
+		</div>
+
+		<div class="list-box02 order-commodity">
+			<div class="order-item">
+				<span class="fn-left list-img04" class="../details.html">
+					<img src="https://gd3.alicdn.com/bao/uploaded/i3/434947224/TB2J.8xkFXXXXbJXXXXXXXXXXXX_!!434947224.jpg_400x400.jpg" class="imglazyload" data-alt="2016春季新款t恤长袖大码宽松韩版印花圆领休闲打底T恤女装" />
+				</span>
+
+				<div class="list-content04">
+					<h3 class="list-title04">国行联保Canon/佳能微单相机 EOS M2 18-55STM…..</h3>
+					<p class="order-text">颜色：白色 <i>尺寸：80cm*120cm</i></p>
+					<div class="price04">
+						<span class="fn-right text-color1">×1</span>	
+						<em class="text-color">¥10.01</em>
+					</div>
+				</div>
+			</div>
+
+			<div class="order-item">
+				<span class="fn-left list-img04" class="../details.html">
+					<img src="https://gd3.alicdn.com/bao/uploaded/i3/434947224/TB2J.8xkFXXXXbJXXXXXXXXXXXX_!!434947224.jpg_400x400.jpg" class="imglazyload" data-alt="2016春季新款t恤长袖大码宽松韩版印花圆领休闲打底T恤女装" />
+				</span>
+
+				<div class="list-content04">
+					<h3 class="list-title04">国行联保Canon/佳能微单相机 EOS M2 18-55STM…..</h3>
+					<p class="order-text">颜色：白色 <i>尺寸：80cm*120cm</i></p>
+					<div class="price04">
+						<span class="fn-right text-color1">×1</span>	
+						<em class="text-color">¥10.01</em>
+					</div>
+				</div>
+			</div>
+
+			<div class="order-price">
+				<em class="fn-right text-color">¥10.00</em>
+				<span class="text-color1">邮费</span>
+			</div>
+
+			<div class="order-price">
+				<em class="fn-right text-color">¥10.01</em>
+				<span class="text-color1">合计</span>
+			</div>
+		</div>
+	</article>
+	<!-- / article end -->
+
+	<!-- tips start -->
+	<section class="fn-clear tips-yanz">
+		<div class="fn-right tips-add">添加</div>
+		<div class="fn-left tips-yanz-img">
+			<img src="http://qr.api.cli.im/qr?data=%25E8%2590%25BD%25E9%259B%25A8&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=c6d2e0fb3f7ae294b85bfa7a8599c35c">
+		</div>
+		<div class="fn-left tips-yanz-text">
+			<p>您的VIP专属号为A123</p>
+			<p>需添加客服为好友验证方可发货</p>
+		</div>
+	</section>
+	<!-- / tips end -->
+
+	<!-- footer start -->
+	<footer class="btm-fixed btn-details">
+		<a href="../groupPage/groupBuy05.html">查看我的团</a>
+	</footer>
+	<!-- / footer end -->
+</section>
+
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/base.min.js"></script>
+<script type="text/javascript">
+	$("#refund").dialog({
+		text:"您正在发起退款，请您再次确认",
+		btnOK: "确定",
+		btnCancel: "取消" 
+	});
+
+	// 验证
+	if($(".tips-yanz").length != 0) {
+		$(".tips-yanz").verificationUser({
+			num: "78062323",
+			url: "http://qr.api.cli.im/qr?data=%25E5%25A4%25A7%25E5%25B8%2588%25E5%25A4%25A7%25E5%25B8%2588%25E7%259A%2584&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=cb751f34d8d32dc9cc6d68bef59bbf6a"
+		});
+	}
+
+	// function getSeverDateTime(){
+	//     var xhr = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
+	//     xhr.open("HEAD", window.location.href, false);
+	//     xhr.send();
+	//     var d= new Date(xhr.getResponseHeader("Date"));
+	//     return d;
+	// }
+	// console.log(getSeverDateTime())
+	// // 对js返回的服务端时间输出测试
+	// var myDate = new Date(getSeverDateTime());
+	// console.log(myDate);
+	// console.log(myDate.getFullYear());
+	// console.log(myDate.getMonth());
+	// console.log(myDate.getDay()); 
+</script>
+</body>
+</html>

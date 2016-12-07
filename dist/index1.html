@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>商品详情</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="style/base.min.css" />
+<!-- / 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="style/layout.min.css" />
+<!-- / 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="style/gmu.min.css" />
+<!-- / 页面下拉加载动效 end -->
+<style type="text/css">
+	.box {
+		position: relative;
+		width: 161px;
+		height: 58px;
+		margin: 100px auto;
+		overflow: hidden;
+		/*background-color: rgb(25,147,145);*/
+	}
+
+	.box span {
+		display: block;
+		position: absolute;
+		width: 39px;
+		height: 39px;
+		-webkit-animation-duration: 1.5s;
+		animation-duration: 1.5s;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		transform-origin: center center;
+		background-repeat: no-repeat;
+		/*background-color: #000;
+		border-radius: 50%;*/
+	}
+
+	.box span:nth-child(1) {
+		left: 122px;
+		bottom: 8px;
+		background-image: url(../images/loading3.png);
+		background-position: top left;
+		-webkit-animation-name: anim-tumble1;
+		animation-name: anim-tumble1;
+	}
+
+	.box span:nth-child(2) {
+		left: 61px;
+		bottom: 6px;
+		background-image: url(../images/loading2.png);
+		background-position: top center;
+		-webkit-animation-name: anim-tumble2;
+		animation-name: anim-tumble2;
+	}
+
+	.box span:nth-child(3) {
+		left: 0;
+		bottom: 8px;
+		background-image: url(../images/loading1.png);
+		background-position: top right;
+		-webkit-animation-name: anim-tumble3;
+		animation-name: anim-tumble3;
+	}
+
+	.box span:nth-child(4) {
+		left: -57px;
+		bottom: 8px;
+		background-image: url(../images/loading3.png);
+		background-position: top left;
+		-webkit-animation-name: anim-tumble4;
+		animation-name: anim-tumble4;
+	}
+
+	.box span:nth-child(5) {
+		left: -118px;
+		bottom: 6px;
+		background-image: url(../images/loading2.png);
+		background-position: top center;
+		-webkit-animation-name: anim-tumble5;
+		animation-name: anim-tumble5;
+	}
+
+	.box span:nth-child(6) {
+		left: -179px;
+		bottom: 8px;
+		background-image: url(../images/loading1.png);
+		background-position: top right;
+		-webkit-animation-name: anim-tumble6;
+		animation-name: anim-tumble6;
+	}
+	
+	@-webkit-keyframes anim-tumble1 {
+	  0% { -webkit-transform: rotate(0deg); left: 122px; }
+	  100% { -webkit-transform: rotate(360deg); left: 301px; }
+	}
+
+	@keyframes anim-tumble1 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: 122px; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 301px; }
+	}
+
+	@-webkit-keyframes anim-tumble2 {
+	  0% { -webkit-transform: rotate(0deg); left: 61px; }
+	  100% { -webkit-transform: rotate(360deg); left: 240px; }
+	}
+
+	@keyframes anim-tumble2 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: 61px; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 240px; }
+	}
+
+	@-webkit-keyframes anim-tumble3 {
+	  0% { -webkit-transform: rotate(0deg); left: 0; }
+	  100% { -webkit-transform: rotate(360deg); left: 179px; }
+	}
+
+	@keyframes anim-tumble3 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: 0; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 179px; }
+	}
+
+	@-webkit-keyframes anim-tumble4 {
+	  0% { -webkit-transform: rotate(0deg); left: -57px; }
+	  100% { -webkit-transform: rotate(360deg); left: 122px; }
+	}
+
+	@keyframes anim-tumble4 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: -57px; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 122px; }
+	}
+
+	@-webkit-keyframes anim-tumble5 {
+	  0% { -webkit-transform: rotate(0deg); left: -118px; }
+	  100% { -webkit-transform: rotate(360deg); left: 61px; }
+	}
+
+	@keyframes anim-tumble5 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: -118px; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 61px; }
+	}
+
+	@-webkit-keyframes anim-tumble6 {
+	  0% { -webkit-transform: rotate(0deg); left: -179px; }
+	  100% { -webkit-transform: rotate(360deg); left: 0; }
+	}
+
+	@keyframes anim-tumble6 {
+	  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); left: -179px; }
+	  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); left: 0; }
+	}
+	
+	.ss {
+		width: 20px;
+		height: 20px;		
+		margin-left: 400px;
+		background-color: rgb(25,147,145);
+		border-radius: 50%;
+	}
+
+	.stylie {
+	  -webkit-animation-name: stylie-keyframes;
+	  -moz-animation-name: stylie-keyframes;
+	  animation-name: stylie-keyframes;
+	  -webkit-animation-duration: 1000ms;
+	  -moz-animation-duration: 1000ms;
+	  animation-duration: 1000ms;
+	  -webkit-animation-delay: 0ms;
+	  -moz-animation-delay: 0ms;
+	  animation-delay: 0ms;
+	  -webkit-animation-fill-mode: forwards;
+	  -moz-animation-fill-mode: forwards;
+	  animation-fill-mode: forwards;
+	  -webkit-animation-timing-function: linear;
+	  -moz-animation-timing-function: linear;
+	  animation-timing-function: linear;
+	  -webkit-animation-iteration-count: infinite;
+	  -moz-animation-iteration-count: infinite;
+	  animation-iteration-count: infinite;
+	  -webkit-transform-origin: 0 0;
+	  -moz-transform-origin: 0 0;
+	  transform-origin: 0 0;
+	}
+
+	@-moz-keyframes stylie-keyframes {
+	  0% {
+	  	-moz-transform:translate(0px, 0px)
+	  }
+	  3.33% {
+	  	-moz-transform:translate(-18.8144px, 0.3659px)
+	  }
+	  6.67% {
+	  	-moz-transform:translate(-36.9911px, 1.4627px)
+	  }
+	  10% {
+	  	-moz-transform:translate(-54.53px, 3.2872px)
+	  }
+	  13.33% {
+	  	-moz-transform:translate(-71.4311px, 5.8346px)
+	  }
+	  16.67% {
+	  	-moz-transform:translate(-87.6944px, 9.0978px)
+	  }
+	  20% {
+	  	-moz-transform:translate(-103.32px, 13.0679px)
+	  }
+	  23.33% {
+	  	-moz-transform:translate(-118.3078px, 17.734px)
+	  }
+	  26.67% {
+	  	-moz-transform:translate(-132.6578px, 23.0834px)
+	  }
+	  30% {
+	  	-moz-transform:translate(-146.37px, 29.1013px)
+	  }
+	  33.33% {
+	  	-moz-transform:translate(-159.4444px, 35.7712px)
+	  }
+	  36.67% {
+	  	-moz-transform:translate(-171.8811px, 43.075px)
+	  }
+	  40% {
+	  	-moz-transform:translate(-183.68px, 50.9925px)
+	  }
+	  43.33% {
+	  	-moz-transform:translate(-194.8411px, 59.502px)
+	  }
+	  46.67% {
+	  	-moz-transform:translate(-205.3644px, 68.5803px)
+	  }
+	  50% {
+	  	-moz-transform:translate(-215.25px, 78.2025px)
+	  }
+	  53.33% {
+	  	-moz-transform:translate(-224.4978px, 88.3421px)
+	  }
+	  56.67% {
+	  	-moz-transform:translate(-233.1078px, 98.9715px)
+	  }
+	  60% {
+	  	-moz-transform:translate(-241.08px, 110.0613px)
+	  }
+	  63.33% {
+	  	-moz-transform:translate(-248.4144px, 121.5814px)
+	  }
+	  66.67% {
+	  	-moz-transform:translate(-255.1111px, 133.5px)
+	  }
+	  70% {
+	  	-moz-transform:translate(-261.17px, 145.7845px)
+	  }
+	  73.33% {
+	  	-moz-transform:translate(-266.5911px, 158.4013px)
+	  }
+	  76.67% {
+	  	-moz-transform:translate(-271.3744px, 171.3158px)
+	  }
+	  80% {
+	  	-moz-transform:translate(-275.52px, 184.4925px)
+	  }
+	  83.33% {
+	  	-moz-transform:translate(-279.0278px, 197.8953px)
+	  }
+	  86.67% {
+	  	-moz-transform:translate(-281.8978px, 211.4876px)
+	  }
+	  90% {
+	  	-moz-transform:translate(-284.13px, 225.232px)
+	  }
+	  93.33% {
+	  	-moz-transform:translate(-285.7244px, 239.0909px)
+	  }
+	  96.67% {
+	  	-moz-transform:translate(-286.6811px, 253.0263px)
+	  }
+	  100% {
+	  	-moz-transform:translate(-287px, 267px)
+	  }
+	}
+	@-webkit-keyframes stylie-keyframes {
+	  0% {
+	  	-webkit-transform:translate(0px, 0px)
+	  }
+	  3.33% {
+	  	-webkit-transform:translate(-18.8144px, 0.3659px)
+	  }
+	  6.67% {
+	  	-webkit-transform:translate(-36.9911px, 1.4627px)
+	  }
+	  10% {
+	  	-webkit-transform:translate(-54.53px, 3.2872px)
+	  }
+	  13.33% {
+	  	-webkit-transform:translate(-71.4311px, 5.8346px)
+	  }
+	  16.67% {
+	  	-webkit-transform:translate(-87.6944px, 9.0978px)
+	  }
+	  20% {
+	  	-webkit-transform:translate(-103.32px, 13.0679px)
+	  }
+	  23.33% {
+	  	-webkit-transform:translate(-118.3078px, 17.734px)
+	  }
+	  26.67% {
+	  	-webkit-transform:translate(-132.6578px, 23.0834px)
+	  }
+	  30% {
+	  	-webkit-transform:translate(-146.37px, 29.1013px)
+	  }
+	  33.33% {
+	  	-webkit-transform:translate(-159.4444px, 35.7712px)
+	  }
+	  36.67% {
+	  	-webkit-transform:translate(-171.8811px, 43.075px)
+	  }
+	  40% {
+	  	-webkit-transform:translate(-183.68px, 50.9925px)
+	  }
+	  43.33% {
+	  	-webkit-transform:translate(-194.8411px, 59.502px)
+	  }
+	  46.67% {
+	  	-webkit-transform:translate(-205.3644px, 68.5803px)
+	  }
+	  50% {
+	  	-webkit-transform:translate(-215.25px, 78.2025px)
+	  }
+	  53.33% {
+	  	-webkit-transform:translate(-224.4978px, 88.3421px)
+	  }
+	  56.67% {
+	  	-webkit-transform:translate(-233.1078px, 98.9715px)
+	  }
+	  60% {
+	  	-webkit-transform:translate(-241.08px, 110.0613px)
+	  }
+	  63.33% {
+	  	-webkit-transform:translate(-248.4144px, 121.5814px)
+	  }
+	  66.67% {
+	  	-webkit-transform:translate(-255.1111px, 133.5px)
+	  }
+	  70% {
+	  	-webkit-transform:translate(-261.17px, 145.7845px)
+	  }
+	  73.33% {
+	  	-webkit-transform:translate(-266.5911px, 158.4013px)
+	  }
+	  76.67% {
+	  	-webkit-transform:translate(-271.3744px, 171.3158px)
+	  }
+	  80% {
+	  	-webkit-transform:translate(-275.52px, 184.4925px)
+	  }
+	  83.33% {
+	  	-webkit-transform:translate(-279.0278px, 197.8953px)
+	  }
+	  86.67% {
+	  	-webkit-transform:translate(-281.8978px, 211.4876px)
+	  }
+	  90% {
+	  	-webkit-transform:translate(-284.13px, 225.232px)
+	  }
+	  93.33% {
+	  	-webkit-transform:translate(-285.7244px, 239.0909px)
+	  }
+	  96.67% {
+	  	-webkit-transform:translate(-286.6811px, 253.0263px)
+	  }
+	  100% {
+	  	-webkit-transform:translate(-287px, 267px)
+	  }
+	}
+	@keyframes stylie-keyframes {
+	  0% {
+	  	transform:translate(0px, 0px)
+	  }
+	  3.33% {
+	  	transform:translate(-18.8144px, 0.3659px)
+	  }
+	  6.67% {
+	  	transform:translate(-36.9911px, 1.4627px)
+	  }
+	  10% {
+	  	transform:translate(-54.53px, 3.2872px)
+	  }
+	  13.33% {
+	  	transform:translate(-71.4311px, 5.8346px)
+	  }
+	  16.67% {
+	  	transform:translate(-87.6944px, 9.0978px)
+	  }
+	  20% {
+	  	transform:translate(-103.32px, 13.0679px)
+	  }
+	  23.33% {
+	  	transform:translate(-118.3078px, 17.734px)
+	  }
+	  26.67% {
+	  	transform:translate(-132.6578px, 23.0834px)
+	  }
+	  30% {
+	  	transform:translate(-146.37px, 29.1013px)
+	  }
+	  33.33% {
+	  	transform:translate(-159.4444px, 35.7712px)
+	  }
+	  36.67% {
+	  	transform:translate(-171.8811px, 43.075px)
+	  }
+	  40% {
+	  	transform:translate(-183.68px, 50.9925px)
+	  }
+	  43.33% {
+	  	transform:translate(-194.8411px, 59.502px)
+	  }
+	  46.67% {
+	  	transform:translate(-205.3644px, 68.5803px)
+	  }
+	  50% {
+	  	transform:translate(-215.25px, 78.2025px)
+	  }
+	  53.33% {
+	  	transform:translate(-224.4978px, 88.3421px)
+	  }
+	  56.67% {
+	  	transform:translate(-233.1078px, 98.9715px)
+	  }
+	  60% {
+	  	transform:translate(-241.08px, 110.0613px)
+	  }
+	  63.33% {
+	  	transform:translate(-248.4144px, 121.5814px)
+	  }
+	  66.67% {
+	  	transform:translate(-255.1111px, 133.5px)
+	  }
+	  70% {
+	  	transform:translate(-261.17px, 145.7845px)
+	  }
+	  73.33% {
+	  	transform:translate(-266.5911px, 158.4013px)
+	  }
+	  76.67% {
+	  	transform:translate(-271.3744px, 171.3158px)
+	  }
+	  80% {
+	  	transform:translate(-275.52px, 184.4925px)
+	  }
+	  83.33% {
+	  	transform:translate(-279.0278px, 197.8953px)
+	  }
+	  86.67% {
+	  	transform:translate(-281.8978px, 211.4876px)
+	  }
+	  90% {
+	  	transform:translate(-284.13px, 225.232px)
+	  }
+	  93.33% {
+	  	transform:translate(-285.7244px, 239.0909px)
+	  }
+	  96.67% {
+	  	transform:translate(-286.6811px, 253.0263px)
+	  }
+	  100% {
+	  	transform:translate(-287px, 267px)
+	  }
+	}
+</style>
+</head>
+
+<body>
+	<div class="box">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="ss stylie">
+	
+	</div>
+</body>
+</html>

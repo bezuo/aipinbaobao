@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- 规定视口区域大小为1:1且不允许缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- IOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- IOS中Safari顶端状态条样式 -->
+<meta content="telephone=no, address=no" name="format-detection"> <!-- 忽略IOS操作系统将五位或以上位数的数字识别成电话号码 -->
+<meta name="author" content="BeZuo">
+<title>已参团</title>
+<link rel="Shortcut Icon" href="images/favicon.ico" />
+<!-- 用于浏览器默认样式重置 start -->
+<link type="text/css" rel="stylesheet" href="../style/base.min.css" />
+<!-- / 用于浏览器默认样式重置 end -->
+
+<!-- 页面模块样式 start -->
+<link type="text/css" rel="stylesheet" href="../style/layout.min.css" />
+<!-- / 页面模块样式 end -->
+
+<!-- 页面下拉加载动效 start -->
+<link rel="stylesheet" type="text/css" href="../style/gmu.min.css" />
+<!-- / 页面下拉加载动效 end -->
+</head>
+
+<body class="bg01">
+<section>	
+	<!-- header start -->
+	<header class="top-fixed header">
+		<a href="javascript: history.back();" class="fn-left iconfont page-back"></a>
+		<h1 class="top-h1">团详情</h1>
+	</header>
+	<!-- / header end -->
+
+	<!-- article start -->
+	<article class="pad-top44 pad-btm50 ui-refresh">
+		
+		<!-- 参团流程 start -->
+		<section class="fn-clear tglc">
+			<div class="fn-left tglc-item">
+				<span class="iconfont text-color">&#xe616;</span>
+				<p>付款开团<br/>或参团</p>
+			</div>
+
+			<div class="fn-left tglc-item">
+				<span class="iconfont text-color">&#xe613;</span>
+				<p>分享给好友<br/>邀请参团</p>
+			</div>
+
+			<div class="fn-left tglc-item">
+				<span class="iconfont text-color1">&#xe615;</span>
+				<p>达到人数<br/>顺利成团</p>
+			</div>
+		</section>
+		<!-- / 参团流程 end -->
+
+		<!-- 参团商品 start -->
+		<section class="ct-comm">
+			<a href="../details.html" class="fn-left ct-comm-img">
+				<img src="https://gd2.alicdn.com/imgextra/i2/2743058927/TB2xNolmpXXXXa.XXXXXXXXXXXX_!!2743058927.jpg_400x400.jpg" />
+			</a>
+			<h3 class="ct-tit">代购韩国夏季高腰牛仔短裤女显瘦百搭破洞毛边修身牛仔裤热裤</h3>
+			<p><em class="price03 text-color">3人团¥0.01</em><span class="odd-price01 text-color1">¥12.00</span></p>
+		</section>
+		<!-- / 参团商品 end -->
+
+		<!-- 参团倒计时 start -->
+		<section class="countdown countdownBg01">
+			<h3>已开团，离成团还差<em class="text-color"> 1 </em>人</h3>
+			<p>剩<em class="text-color time" data-end="83636000"><!-- 23:13:56 --></em>自动结束</p>
+			<span class="font12">快去邀请好友参团吧！</span>
+		</section>
+		<!-- / 参团倒计时 end -->
+
+		<!-- 参团记录 start -->
+		<section class="ct-record">
+			<h3 class="ct-record-tit">参团记录</h3>
+			<ul>
+				<li>
+					<em class="fn-right ct-head">团长大人</em>
+					<span class="fn-left ct-record-img" style="background-image: url(http://i2.s1.dpfile.com/pc/4ff81aa2f271039a244ff3b313219ea3%28249c249%29/thumb.jpg);"></span>
+
+					<div class="text-color1 ">
+						<h5>花姑娘的噶伙</h5>
+						<p class="font12">2016-05-04 11:13:34</p>
+					</div>
+				</li>
+
+				<li>
+					<span class="fn-left ct-record-img" style="background-image: url(http://image.cn.made-in-china.com/prodzip/000-zKeQFaCqYEbp.jpg);"></span>
+					
+					<div class="text-color1 ">
+						<h5>嘻嘻哈哈哟嘻嘻</h5>
+						<p class="font12">2016-05-03 21:09:39</p>
+					</div>
+				</li>
+
+				<li>
+					<span class="fn-left ct-record-img" style="background-image: url(http://wx.qlogo.cn/mmopen/Q3auHgzwzM7xnomZ1tCqUmTAcgmiaT1msvMykKDGiaWgLJyiaA5LIu6ib8Igu1lwsibJsRemkSNpKeUcyjBG4fhtVibg/0);"></span>
+					
+					<div class="text-color1 ">
+						<h5>八嘎呀路</h5>
+						<p class="font12">2016-05-03 08:54:58</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- / 参团记录 end -->
+	</article>
+	<!-- / article end -->
+
+	<!-- footer start -->
+	<footer class="btm-fixed buy-foot">
+		<a href="javascript:void(0);" class="btn-buy06">我要参团购买</a>
+	</footer>
+	<!-- / footer end -->
+</section>
+
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/base.min.js"></script>
+<script type="text/javascript">
+	// 图片延迟加载;
+	$(".imglazyload").lazyImgLoad({
+		backgroundImg: "http://m.baokuandaren.com/baokuandaren/static/images/img-placeholder.png",
+		distance: "50"
+	});
+
+	// 倒计时插件
+	$(".time").countdown();
+</script>
+</body>
+</html>
